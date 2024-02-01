@@ -1,0 +1,31 @@
+# GET request to the root endpoint
+GET http://localhost:3002/
+
+# GET request to retrieve all users
+GET http://localhost:3002/api/users
+
+# GET request to retrieve a specific user by ID (replace :id with an actual user ID)
+GET http://localhost:3002/api/user/:id
+
+# POST request to register a new user
+POST http://localhost:3002/api/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "email": "admin1@example.com",
+  "password": "admin1234"
+}
+
+# POST request to log in (replace the email and password with valid credentials)
+POST http://localhost:3002/api/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "admin"
+}
+
+# GET request to verify a token (make sure to replace the token with a valid one)
+GET http://localhost:3002/api/token
+Authorization: Bearer <token>
